@@ -1,3 +1,4 @@
+                               PLACEMENT PREPARATION APP
 A comprehensive web-based platform designed to help students prepare for campus placements through aptitude practice, interview preparation resources, company-specific guidance, and administrative notifications. Built using Java MVC Architecture with Servlets, JSP, JDBC, and MySQL.
 
 🚀 Features
