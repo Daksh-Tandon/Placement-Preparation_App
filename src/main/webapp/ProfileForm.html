@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Profile-Form</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;}
+body{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.profile-form{
+
+width:fit-content;
+display:flex;
+flex-direction:column;
+gap:10px;
+border:2px solid black;
+padding:20px;
+border-radius:15px;
+box-shadow:2px 2px 2px;}
+input{
+padding:12px;
+border-radius:12px;
+}
+.profile-sub{
+padding:12px;
+border-radius:10px;
+background-color:black;
+color:white;
+
+}
+
+.semester-cgpa {
+padding:12px;
+border-radius:12px;
+margin-top:10px;
+display:none;
+gap:10px;
+border:2px solid black;
+}
+.semester-cgpa input{
+padding:12px;
+border-radius:12px;
+margin:10px;
+
+
+}
+
+
+</style>
+</head>
+<body>
+<h1>Please Fill Your Details</h1>
+<br>
+<form class="profile-form" onsubmit="handlesubmit(event)" action="profile" method="post">
+UserName:<input type="text" placeholder="Enter your UserName" id="user" name="UserName" required>
+Semester:<input type="Number" placeholder="Enter Your Current Semester "  id="sem" name="sem" min=1 max=8 required> 
+
+
+College:<input type="text" id="college" name="college" placeholder="Enter Your College Name" required>
+Leetcode:<input 
+  type="url" 
+  name="leetcode" 
+  id="leet"
+  placeholder="https://leetcode.com/your-username" 
+  
+>
+Github:<input 
+  type="url" 
+  name="github"
+  id="git" 
+  placeholder="https://github.com/your-username" 
+  >
+  <div class="semester-cgpa">
+</div>
+
+
+<button class="profile-sub">Submit</button>
+
+
+
+
+</form>
+
+
+<script>
+ function handlesubmit(e){
+    e.preventDefault();
+	let form1=document.getElementsByClassName("profile-form")[0];
+	let u=document.getElementById("user");
+	let s=document.getElementById("sem");
+	let c=document.getElementById("college");
+	let git=document.getElementById("git");
+	let leet=document.getElementById("leet");
+	let main=document.getElementsByClassName("profile-sub")[0];
+	let cont=document.getElementsByClassName("semester-cgpa")[0]; 
+	if(u.value && s.value && c.value && git.value && leet.value){
+		
+		let i=s.value;
+		if(i==1){
+			  main.onclick = function(){
+		            form1.submit(); 
+		        };
+		        return;
+		}
+		for(let k=1;k<i;k++){
+			let h=document.createElement("input");
+			h.type="Number";
+			h.min = 0;
+	        h.max = 10;
+	        h.step = "0.01";
+	        h.name=`Sem${k}`;
+			h.placeholder=`Sem ${k} Gpa`;
+			h.style.padding="12px";
+			cont.appendChild(h);
+			cont.style.display="flex";
+			
+			
+		}
+		
+		 let btn = document.createElement("button");
+	        btn.className = "profile-sub";
+	        btn.textContent = "Confirm";
+	        btn.type = "button";
+	        main.style.display="none";
+
+	        btn.onclick = function(){
+	            form1.submit(); 
+	        };
+
+	        cont.appendChild(btn);
+		
+		
+		
+	}
+	else alert("Details toh fill kar");
+	
+	
+	
+}
+</script>
+</body>
+</html>

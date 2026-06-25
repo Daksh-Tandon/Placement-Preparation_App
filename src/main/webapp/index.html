@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Prep App</title>
+    <style>
+    /* =========================
+   RESET
+========================= */
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#dbeafe);
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    font-size:2.2rem;
+    color:#1e293b;
+    margin-bottom:25px;
+}
+
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+
+    background:white;
+    padding:15px 35px;
+
+    width:max-content;
+    margin:0 auto 50px auto;
+
+    border-radius:40px;
+    list-style:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.nav a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:600;
+}
+
+/* cards container */
+.content{
+    width:100%;
+    max-width:1100px;
+
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:30px;
+}
+
+/* card */
+.card{
+    background:white;
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+.card p,
+.card li{
+    font-size:16px;
+    line-height:1.8;
+    color:#475569;
+}
+
+.li{
+    padding-left:20px;
+}
+
+/* footer */
+#contact{
+    margin-top:50px;
+    text-align:center;
+}
+
+#contact img{
+    width:55px;
+    height:55px;
+    border-radius:10px;
+}
+
+/* mobile */
+@media(max-width:768px){
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .nav{
+        width:100%;
+        max-width:500px;
+        flex-wrap:wrap;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+} 
+
+    </style>
+</head>
+<body >
+
+    <h1>Welcome to Placement Preparation App</h1>
+
+
+    <br>
+      <div class="nav">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Signin.html">Signin</a></li>
+        <li><a href="Register.html">Register</a></li>
+    </div>
+    
+    <br>
+    <div class="content">
+
+    <div class="card" >
+      <h2>What we do</h2>
+      <p>A smart web application designed to help students prepare for campus placements efficiently. It provides structured learning for core subjects like DSA, DBMS, OS, and Aptitude, along with curated notes, practice questions, and company-specific preparation resources. The platform simplifies preparation by organizing everything in one place. 🚀</p>
+    </div>
+    <div class="card">
+      <h2 >How does it Help You</h2>
+     <div class="list">
+      <ul class='li'>
+        <li> Topic-wise notes and important concepts</li>
+        <li> Interactive quizzes with instant results</li>
+        <li> Progress tracking and performance analysis</li>
+        <li> Bookmark important questions for revision</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+    
+    <div id="contact">
+
+      
+      <a href="https://www.linkedin.com/in/daksh-tandon-1986b2322/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0bGEl9v47XieEtHyj0TqTr1tOXJmib-KHtw&s"></a>
+    </div>
+    
+
+
+</body>
+</html>
